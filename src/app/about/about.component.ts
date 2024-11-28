@@ -4,7 +4,6 @@ import { RouterOutlet } from "@angular/router";
 
 @Component({
     selector: 'about',
-    imports: [RouterOutlet],
     templateUrl: './about.component.html'
 })
 
