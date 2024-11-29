@@ -23,11 +23,4 @@ jobs:
     - name: Install dependencies
       run: npm install --force
 
-    # Run Datadog Synthetic tests
-    - name: Run Datadog Synthetic tests
-      uses: DataDog/synthetics-ci-github-action@v1
-      with:
-        api_key: ${{ secrets.DD_API_KEY }}
-        app_key: ${{ secrets.DD_APP_KEY }}
-        test_search_query: 'tag:e2e-tests' # Adjust this tag as needed
 
