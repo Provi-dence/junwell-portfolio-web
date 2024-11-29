@@ -13,24 +13,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # Set up Node.js with the required version
+    # Set up Node.js
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 18.19.1
+        node-version: 18
 
     # Install dependencies
     - name: Install dependencies
       run: npm install
 
-    # Build the project (if necessary)
-    - name: Build the project
-      run: ng buid
-
-    # Run Synthetic tests within your GitHub workflow.
+    # Run Datadog Synthetic tests
     - name: Run Datadog Synthetic tests
-      uses: DataDog/synthetics-ci-github-action@v1 # Ensure the correct version
+      uses: DataDog/synthetics-ci-github-action@v1
       with:
         api_key: ${{ secrets.DD_API_KEY }}
         app_key: ${{ secrets.DD_APP_KEY }}
-        test_search_query: 'tag:e2e-tests' # Modify this tag as per your configuration
+        test_search_query: 'tag:e2e-tests' # Adjust this tag as needed
+
