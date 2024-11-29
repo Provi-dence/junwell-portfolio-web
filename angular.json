@@ -16,6 +16,7 @@
             "outputPath": "dist/alonzo-portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref":"/",
             "polyfills": [
               "zone.js"
             ],
