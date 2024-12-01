@@ -599,7 +599,21 @@
     <!--all the divisions-->
 
     <style>
+      /* Container Styling */
+      .header-image {
+          display: flex;
+          justify-content: center; /* Centers the image horizontally */
+          align-items: center; /* Centers vertically if the container has height */
+          height: 100vh; /* Makes the container full viewport height */
+          text-align: center; /* Ensures content stays aligned */
+      }
       
+      /* Media Query for Mobile (Optional Fine-tuning) */
+      @media (max-width: 768px) {
+          .feathered-image {
+              max-width: 80%; /* Slightly reduce image width for smaller screens */
+          }
+      }
     </style>
 </main>
 
