@@ -678,7 +678,7 @@ body{
     color:rgb(231, 231, 231);
     display: inline-block;
     padding:1.5%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .skill-text{
@@ -1423,7 +1423,7 @@ For devices with smaller width like mobile phone
         display: none;
     }
     #breaker{
-        height: 50vh;
+        height: 100vh;
         width: 200%;
         background-color: #ffde59;
         opacity: 1;
@@ -1878,7 +1878,7 @@ for tabs and large phones
         display: none;
     }
     #breaker{
-        height: 50vh;
+        height: 100vh;
         width: 200%;
         background-color: #ffde59;
         opacity: 1;
@@ -2364,6 +2364,11 @@ for tabs and large phones
         overflow: hidden;
         animation: opacity 1.4s ease ;
     }
+
+    .service:hover{
+        background-color: #ffde59;
+    }
+
     .service-img{
         text-align: center;
     }
