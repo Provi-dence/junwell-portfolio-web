@@ -135,7 +135,7 @@
                             <p>I specialize in creating modern, responsive websites and web applications.</p>
                         </div>
                     </div>
-                    
+
                     <div class="service-two service wow">
                         <div class="service-img">
                             <img src="assets/images/instagram.png" alt="Web Applications" class="service-icon">
@@ -145,7 +145,7 @@
                             <p>Transform your ideas into powerful web applications. I build scalable solutions using Angular, React, and Node.js.</p>
                         </div>
                     </div>
-                    
+
                     <div class="service-three service wow">
                         <div class="service-img">
                             <img src="assets/images/bulb.png" alt="UI/UX Design" class="service-icon">
@@ -154,7 +154,7 @@
                             <h2>UI/UX Design</h2>
                             <p>Enhance user engagement with intuitive and modern user interfaces. I offer UI/UX design services focused on delivering excellent user experiences.</p>
                         </div>
-                    </div>                                     
+                    </div>
                 </div>
             </div>
             <!--services content end-->
@@ -303,56 +303,57 @@
             <div class="contact-content">
                 <div class="contact-form">
                     <div class="form-header">Message Me</div>
-                    <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                       <div class="input-line">
-                        <input 
-                          formControlName="name" 
-                          type="text" 
-                          placeholder="Name" 
-                          class="input-name" 
-                          [ngClass]="{'input-error': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}" 
+
+                        <input
+                          formControlName="name"
+                          type="text"
+                          placeholder="Name"
+                          class="input-name"
+                          [ngClass]="{'input-error': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}"
                         />
                         <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error-message">
                           Name is required.
                         </div>
-                  
-                        <input 
-                          formControlName="email" 
-                          type="email" 
-                          placeholder="Email" 
-                          class="input-name" 
+
+                        <input
+                          formControlName="email"
+                          type="email"
+                          placeholder="Email"
+                          class="input-name"
                           [ngClass]="{'input-error': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}"
                         />
                         <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
                           A valid email is required.
                         </div>
                       </div>
-                  
-                      <input 
-                        type="text" 
-                        formControlName="subject" 
-                        placeholder="Subject" 
-                        class="input-subject" 
+
+                      <input
+                        type="text"
+                        formControlName="subject"
+                        placeholder="Subject"
+                        class="input-subject"
                         [ngClass]="{'input-error': contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched}"
                       />
                       <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="error-message">
                         Subject is required.
                       </div>
-                  
-                      <textarea 
-                        formControlName="message" 
-                        class="input-textarea" 
+
+                      <textarea
+                        formControlName="message"
+                        class="input-textarea"
                         placeholder="Message"
                         [ngClass]="{'input-error': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"
                       ></textarea>
                       <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error-message">
                         Message is required.
                       </div>
-                  
+
                       <button type="submit" [disabled]="!contactForm.valid">Submit</button>
                     </form>
                 </div>
-                        
+
                 <!--Contact form-->
                 <!--Contact information-->
                 <div class="contact-info">
