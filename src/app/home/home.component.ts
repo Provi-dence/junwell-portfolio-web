@@ -58,7 +58,7 @@ export class HomeComponent {
         console.log('SUCCESS!');
         Swal.fire({
           icon: 'success',
-          title: 'Thank you! Stay tuned for the updates!',
+          title: 'Sending your email...',
         }).then(() => window.location.reload());
       },
       (error: EmailJSResponseStatus) => {
